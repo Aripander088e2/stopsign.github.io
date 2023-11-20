@@ -136,12 +136,12 @@ function Computer() {
             cost: 2,
             costType:"science",
             finish:function() { game.clouds.gainStormDuration(5); this.cost += .5; this.ticksNeeded += 50; },
-            done:function() { return game.clouds.initialStormDuration >= 300; },
+            done:function() { return game.clouds.initialStormDuration >= 3000; },
             showing: function() { return true; }
         },
         { //Build Robots
             currentTicks: 0,
-            ticksNeeded: 10000,
+            ticksNeeded: 1000,
             threads: 0,
             cost:.01,
             costType:"metal",
@@ -155,7 +155,7 @@ function Computer() {
             threads: 0,
             cost:10,
             costType:"science",
-            finish:function() { game.robots.gainStorage(5); this.cost = precision3(20*(this.completions+2 )+ Math.pow(this.completions, 2)); this.ticksNeeded+=2000; },
+            finish:function() { game.robots.gainStorage(25); this.cost = precision3(5*(this.completions+2 )+ Math.pow(this.completions, 2)); this.ticksNeeded+=200; },
             showing: function() { return game.robots.unlocked; }
         },
         { //Improve House Design
@@ -164,7 +164,7 @@ function Computer() {
             threads: 0,
             cost:.5,
             costType:"wood",
-            finish:function() { game.population.improveHouse(); this.ticksNeeded += 500; },
+            finish:function() { game.population.improveHouse(); this.ticksNeeded += 50; },
             showing: function() { return game.robots.unlocked; },
             done:function() { return this.completions >= 100; }
         }
