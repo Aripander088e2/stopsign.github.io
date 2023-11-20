@@ -25,7 +25,7 @@ function Water() {
     };
 
     this.transferWater = function() {
-        this.transferred = this.outdoor / 1000;
+        this.transferred = this.outdoor / 800;
         this.outdoor -= this.transferred;
         return this.transferred;
     };
