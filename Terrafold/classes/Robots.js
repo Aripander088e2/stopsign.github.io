@@ -69,7 +69,7 @@ function Robots() {
             game.cash -= 3000;
             this.unlocked = 1;
             view.checkRobotsUnlocked();
-            this.gainRobots(1);
+            this.gainRobots(5);
         }
         view.updateComputer();
         view.updateRobots();
