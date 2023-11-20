@@ -122,11 +122,11 @@ function Computer() {
         },
         { //Find more Ice Sellers
             currentTicks: 0,
-            ticksNeeded: 2000,
+            ticksNeeded: 200,
             threads: 0,
             cost: .5,
             costType:"cash",
-            finish:function() { game.ice.findIceSeller(1) },
+            finish:function() { game.ice.findIceSeller(1000) },
             showing: function() { return true; }
         },
         { //Bigger Storms
