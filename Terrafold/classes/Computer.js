@@ -131,9 +131,9 @@ function Computer() {
         },
         { //Bigger Storms
             currentTicks: 0,
-            ticksNeeded: 600,
+            ticksNeeded: 60,
             threads: 0,
-            cost: 2,
+            cost: 0.2,
             costType:"science",
             finish:function() { game.clouds.gainStormDuration(5); this.cost += .5; this.ticksNeeded += 50; },
             done:function() { return game.clouds.initialStormDuration >= 3000; },
