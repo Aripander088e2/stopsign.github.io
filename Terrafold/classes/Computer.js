@@ -1,8 +1,8 @@
 function Computer() {
     this.unlocked = 0;
     this.threads = 1;
-    this.freeThreads = 1;
-    this.speed = 1;
+    this.freeThreads = 8;
+    this.speed = 8;
 
     this.tick = function() {
         for(var i = 0; i < this.processes.length; i++) {
@@ -35,8 +35,8 @@ function Computer() {
     };
 
     this.unlockComputer = function() {
-        if(game.science >= 1000) {
-            game.science -= 1000;
+        if(game.science >= 10) {
+            game.science -= 10;
             this.unlocked = 1;
             view.checkComputerUnlocked();
         }
@@ -53,7 +53,7 @@ function Computer() {
         view.updateComputer();
     };
     this.getThreadCost = function() {
-        return precision2(Math.pow(2, this.threads)*500);
+        return precision2(Math.pow(1.2, this.threads)*50);
     };
 
     this.buySpeed = function() {
@@ -65,7 +65,7 @@ function Computer() {
         view.updateComputer();
     };
     this.getSpeedCost = function() {
-        return precision2(Math.pow(2, this.speed)*500);
+        return precision2(Math.pow(1.2, this.speed)*50);
     };
 
     this.addThread = function(dataPos, numAdding) {
