@@ -14,7 +14,7 @@ function Ice() {
     };
 
     this.transferWater = function() {
-        this.transferred = this.ice / 1000;
+        this.transferred = this.ice / 750;
         this.ice -= this.transferred;
         return this.transferred;
     };
