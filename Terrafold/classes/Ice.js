@@ -29,7 +29,7 @@ function Ice() {
     };
 
     this.findIceSeller = function(amount) {
-        this.max += amount * 200;
+        this.max += amount * 20000;
         this.gain += amount;
     }
 }
