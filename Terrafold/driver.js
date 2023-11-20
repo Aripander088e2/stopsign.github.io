@@ -17,7 +17,7 @@ function tick() {
 
 function recalcInterval(newSpeed) {
     doWork.postMessage({stop:true});
-    doWork.postMessage({start:true,ms:(1000 / newSpeed)});
+    doWork.postMessage({start:true,ms:(200 / newSpeed)});
 }
 
 function handleFPSDifference() {
