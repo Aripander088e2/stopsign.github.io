@@ -62,7 +62,7 @@ function Ship(name, amount, foodAmount) {
             return;
         }
         this.foodAmount = 0;
-        this.speed = .05;
+        this.speed = .5;
         this.target = this.targetHome();
         this.engaged = false;
     };
