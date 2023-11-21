@@ -19,7 +19,7 @@ function Water() {
 
         this.selling = this.indoor / 100;
         this.indoor -= this.selling;
-        this.gain = this.selling * 2;
+        this.gain = this.selling * 10;
         game.cash += this.gain;
 
     };
@@ -39,7 +39,7 @@ function Water() {
     };
 
     this.getPrice = function(toSell) {
-        return toSell * 2;
+        return toSell * 10;
     }
 
 }
