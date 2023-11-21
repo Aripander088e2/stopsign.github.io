@@ -10,7 +10,7 @@ function SpaceDock() {
         var excess = this.energy - this.battery;
         this.drain = 0;
         if(excess > 0) {
-            this.drain = excess/500;
+            this.drain = excess/8000;
             game.power -= this.drain;
         }
     };
